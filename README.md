@@ -7,8 +7,8 @@ Our network will be based on article https://arxiv.org/abs/1502.03044
 
 Team members:
 
-Alexandr Voronin
-Ksenia Lapshova
-Nikita Kornilov
-Pavel Bartenev
+Alexandr Voronin \\
+Ksenia Lapshova \\
+Nikita Kornilov \\
+Pavel Bartenev \\
 Yulia Sergeeva
