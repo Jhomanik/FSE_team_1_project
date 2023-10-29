@@ -22,6 +22,7 @@ COPY requirements.txt requirements.txt
 RUN python3 -m pip install -r requirements.txt
 
 # Clone the git repository
+WORKDIR /app
 RUN git clone https://github.com/Jhomanik/FSE_team_1_project
 WORKDIR /app/FSE_team_1_project
 
@@ -29,6 +30,6 @@ WORKDIR /app/FSE_team_1_project
 COPY Makefile .
 COPY hello.cpp .
 RUN make all
-
+RUN chmod +x hello
 # Set the entrypoint
-ENTRYPOINT [ "python3" ]
+ENTRYPOINT [ "bash" ]
