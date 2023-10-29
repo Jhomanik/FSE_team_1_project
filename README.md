@@ -25,15 +25,15 @@ In order to run and develop our network:
 
 2) Run docker image and share directory images
 
-   docker run --name pytorch-container  -it  -v $(pwd):/app/FSE_team_1_project FSE_group_1
+   `docker run --name pytorch-container  -it  -v $(pwd):/app/FSE_team_1_project FSE_group_1`
    
-3) For demo on jpg  image in folder Image run python command in docker
+3) For demo on jpg  image from your system   run python command in docker
    
-   python inference.py Images/image.jpg Data/captions_tokenized.json Data/CaptionNetBest2.pth
+   `python inference.py image.jpg Data/captions_tokenized.json Data/CaptionNetBest2.pth`
 
 4) To test solution run python command in docker
    
-   python tests.py  
+   `python tests.py`  
 
 5) You can also install all required packages using prereqs.sh script, compile files using build.sh script and run tests with build.sh 
    
