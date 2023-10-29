@@ -23,7 +23,7 @@ RUN python3 -m pip install -r requirements.txt
 
 # Clone the git repository
 WORKDIR /app
-RUN git clone https://github.com/Jhomanik/FSE_team_1_project
+RUN git clone https://github.com/Jhomanik/FSE_team_1_project.git
 WORKDIR /app/FSE_team_1_project
 
 # Copy Makefile and C++ code, then run make
