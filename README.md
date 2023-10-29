@@ -21,7 +21,7 @@ Yulia Sergeeva
 In order to run and develop our network:
 1) Create docker from DockerFile with command
    
-`docker build -t FSE_group_1 . -f Dockerfile`
+   `docker build -t FSE_group_1 . -f Dockerfile`
 
 2) Run docker image and share directory images
 
