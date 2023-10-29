@@ -28,5 +28,7 @@ docker build -t FSE_group_1 . -f Dockerfile
    python inference.py image.jpg Data/captions_tokenized.json Data/CaptionNetBest2.pth
 
 4) To test solution run python command in docker
-   python tests.py   
+   python tests.py  
+
+You can also install all required packages using prereqs.sh script, compile files using build.sh script and run tests with build.sh 
    
