@@ -19,17 +19,18 @@ Yulia Sergeeva
 
 
 In order to run and develop our network:
+0) Clone represitory and go its directory
 1) Create docker from DockerFile with command
    
-   `docker build -t FSE_group_1 . -f Dockerfile`
+   `docker build -t text_network_image . -f Dockerfile.txt`
 
 2) Run docker image and share directory images
 
-   `docker run --name pytorch-container  -it  -v $(pwd):/app/FSE_team_1_project FSE_group_1`
+   `docker run --name network_container  -it  -v $(pwd):/app/FSE_team_1_project text_network_image`
    
 3) For demo on jpg  image from your system   run python command in docker
    
-   `python inference.py image.jpg Data/captions_tokenized.json Data/CaptionNetBest2.pth`
+   `python inference.py Images/man.jpg Data/captions_tokenized.json Data/CaptionNetBest2.pth`
 
 4) To test solution run python command in docker
    
