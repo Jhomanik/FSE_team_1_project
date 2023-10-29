@@ -1,0 +1,34 @@
+FROM python:3.10.5-slim-buster
+
+# Set environment variables
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install system dependencies
+RUN apt-get update && \
+    apt-get install -y \
+        git \
+        python3-pip \
+        python3-dev \
+        python3-opencv \
+        libglib2.0-0 \
+        g++ \
+        make
+
+# Upgrade pip
+RUN python3 -m pip install --upgrade pip
+
+# Copy and install Python requirements
+COPY requirements.txt requirements.txt
+RUN python3 -m pip install -r requirements.txt
+
+# Clone the git repository
+RUN git clone https://github.com/Jhomanik/FSE_team_1_project
+WORKDIR /app/FSE_team_1_project
+
+# Copy Makefile and C++ code, then run make
+COPY Makefile .
+COPY hello.cpp .
+RUN make all
+
+# Set the entrypoint
+ENTRYPOINT [ "python3" ]
